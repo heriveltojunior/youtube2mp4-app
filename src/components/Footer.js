@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer>
-      <p><b>Herivelto Junior © 2023</b></p>
+      <p><b>Herivelto Junior © 2024</b></p>
   </footer>
   );
 }

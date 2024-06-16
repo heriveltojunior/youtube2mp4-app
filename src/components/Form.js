@@ -17,7 +17,7 @@ const DownloadForm = () => {
         setLoading(true);
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/download/', {
+            const response = await fetch('https://mp4.herivelto.net/api/download/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -58,10 +58,10 @@ const DownloadForm = () => {
                 </button>
             </form>
             {error && <p className="error">{error}</p>}
-            {loading && <p className="loading">Por favor espere enquanto o Link de Download é gerado</p>}
+            {loading && <p className="loading">Aguarde enquanto o link de download é criado.</p>}
             {downloadLink && (
                 <div id="result">
-                    <h2>Download link: <a href={downloadLink} target="_blank" rel="noopener noreferrer">{videoTitle}</a></h2>
+                    <h2>Link de Download: <a href={downloadLink} target="_blank" rel="noopener noreferrer">{videoTitle}</a></h2>
                     <a href={downloadLink} target="_blank" rel="noopener noreferrer"><img class="img-responsive" alt="Download" src={videoThumb}/></a>
                 </div>
             )}
