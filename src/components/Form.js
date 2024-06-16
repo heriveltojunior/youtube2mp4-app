@@ -17,7 +17,7 @@ const DownloadForm = () => {
         setLoading(true);
 
         try {
-            const response = await fetch('https://mp4.herivelto.net/api/download/', {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/download/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
